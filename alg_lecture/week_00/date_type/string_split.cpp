@@ -6,26 +6,26 @@
 /*   By: donchoi <donchoi@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 14:35:12 by donchoi           #+#    #+#             */
-/*   Updated: 2022/12/21 15:19:26 by donchoi          ###   ########.fr       */
+/*   Updated: 2022/12/22 11:31:49 by donchoi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<string> split(string src, string desc) {
+vector<string> split(string src, string dest) {
 	vector<string> result;
 	long long pos;
 	string str;
 	
 	// 1. 원본 문자열에서 찾으려는 문자열을 찾고 찾으면 위치를 할당한다. (이걸 문자열이 끝날때까지 반복한다.)
-	while ((pos = src.find(desc)) != string::npos) {
+	while ((pos = src.find(dest)) != string::npos) {
 		// 2. 찾은 위치만큼의 문자열을 잘라낸다.
 		str = src.substr(0, pos);
 		// 3. 잘라낸 문자열을 배열에 넣는다.
 		result.push_back(str);
 		// 4. 기존 문자열에서 찾은 위치와 찾으려는 문자열의 길이만큼 잘라낸다.
-		src.erase(0, pos + desc.length());
+		src.erase(0, pos + dest.length());
 	}
 	
 	return result;
