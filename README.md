@@ -1,7 +1,7 @@
 ﻿## 실습환경
 ~~windows~~ MacOS && G++ && VSC (MacOS 구매로 인해 변경)
 
-```
+```shell
 g++ -std=c++14 -Wall *.cpp -o test
 ```
 
